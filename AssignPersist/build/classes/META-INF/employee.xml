@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ovde mozemo da mapiramo jednu ili vise klasa(entiteta)
+koreni element je entity mappings element
+-->
+<entity-mappings
+  xmlns="http://java.sun.com/xml/ns/persistence/orm"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_1_0.xsd"
+  version="1.0">
+
+        <description>XML mapping file        </description>
+        <package>assignpersist</package>
+     <entity class = "assignpersist.Employee">
+        <table name = "employee"></table>
+        <attributes>
+         <id name = "id">
+             <column name ="emp_id"></column>
+             <generated-value strategy = "IDENTITY" />
+         </id>   
+          <basic name="name">
+              <column name = "name" lenght = "100"></column>
+          </basic>
+          <basic name="age">
+              <column name = "age" ></column>
+          </basic>
+          <basic name="address">
+              <column name = "address" lenght = "100"></column>
+          </basic>
+           <basic name="income">
+              <column name = "income"></column>
+          </basic>   
+                     
+        </attributes>
+            
+     </entity>
+
+ </entity-mappings>
+
+    
